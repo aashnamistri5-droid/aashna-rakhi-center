@@ -178,11 +178,28 @@ style="position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;paddi
 document.getElementById("rakhiForm").addEventListener("submit", function(event) {
     event.preventDefault();
 
-    alert("🎉 Thank you! Your Custom Rakhi request has been submitted successfully.");
+    const phone = "918821839802"; // अपना WhatsApp नंबर यहाँ डालें
+
+    const name = document.querySelector('input[type="text"]').value;
+    const color = document.querySelector("select").value;
+    const message = document.querySelector("textarea").value;
+
+    const text =
+`🌸 New Custom Rakhi Order 🌸
+
+👤 Name: ${name}
+🎨 Color: ${color}
+💌 Message: ${message}`;
+
+    window.open(
+        "https://wa.me/" + phone + "?text=" + encodeURIComponent(text),
+        "_blank"
+    );
 
     document.getElementById("rakhiForm").reset();
 });
 </script>
+  
  
 </body>
 </html>
