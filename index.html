@@ -176,3 +176,12 @@ style="position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;paddi
 </section>
 </body>
 </html>
+<script>
+document.getElementById("rakhiForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    alert("🎉 Thank you! Your Custom Rakhi request has been submitted successfully.");
+
+    document.getElementById("rakhiForm").reset();
+});
+</script>
